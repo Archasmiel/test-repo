@@ -1,3 +1,5 @@
+// https://www.codewars.com/kata/59122604e5bc240817000016
+
 class PrimeGen {
 
     private static boolean isPrime(int num, int[] primes, int size) {
@@ -15,7 +17,7 @@ class PrimeGen {
         return true;
     }
 
-    private static int[] primes(int num) {
+    private static void primes(int num) {
         int index = 1, current = 3;
         int[] primes = new int[num];
         primes[0] = 2;
@@ -27,7 +29,6 @@ class PrimeGen {
                 current += 1;
             }
         }
-        return primes;
     }
 
     public static void main(String[] args) {
