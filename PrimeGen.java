@@ -1,8 +1,3 @@
-import java.util.Arrays;
-import java.util.Currency;
-
-// https://www.codewars.com/kata/59122604e5bc240817000016
-
 class PrimeGen {
 
     private static boolean isPrime(int num, int[] primes, int size) {
@@ -36,14 +31,15 @@ class PrimeGen {
     }
 
     public static void main(String[] args) {
-        long startTime;
         int[] sizes = {500_000, 1_000_000, 2_000_000, 5_000_000};
 
         for (int size: sizes) {
-            startTime = System.currentTimeMillis();
+            long startTime = System.currentTimeMillis();
             primes(size);
-            System.out.printf("%dms runtime for %d primes.", (System.currentTimeMillis() - startTime), size);
+            System.out.println((System.currentTimeMillis() - startTime) + "ms runtime for " + size + " primes.");
         }
+
+        
     }
 
 }
